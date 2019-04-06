@@ -1,4 +1,4 @@
-# Return if a string is a palindrome
+# Returns if a string is a palindrome
 
 def palindrome(s):
 	n = len(s)
