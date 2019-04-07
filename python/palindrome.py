@@ -10,6 +10,8 @@ def palindrome(s):
 	else:
 		return False
 
+# Simple tests
+
 print(palindrome("a"))
 print(palindrome("aa"))
 print(palindrome("aba"))

@@ -8,7 +8,7 @@ def is_power_of(x,y):
 	else:
 		return False
 
-# Simple test
+# Simple tests
 
 print("0 is power of 2:",is_power_of(0,2))
 print("1 is power of 2:",is_power_of(1,2))
