@@ -35,13 +35,10 @@ def generate_indexes(l_limits):
 		l_idx[0] = l_idx[0] + 1
 
 		j = 0
-		while j < n - 1 and l_idx[j] == l_limits[j]:
+		while j < n and l_idx[j] == l_limits[j]:
 			l_idx[j] = 0
 			l_idx[j + 1] = l_idx[j + 1] + 1
 			j = j + 1
-
-		if l_idx[n - 1] == l_limits[n - 1]:
-			l_idx[n - 1] = 0
 
 		print i, l_idx[::-1] 
 
