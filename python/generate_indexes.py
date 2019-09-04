@@ -21,7 +21,6 @@
 #			16 [2, 2, 0]
 #			17 [2, 2, 1]
 
-
 def generate_indexes(l_limits):
 	n = len(l_limits)
 
@@ -29,18 +28,17 @@ def generate_indexes(l_limits):
 	for i in range(n):
 		m = m * l_limits[i]
 
-	l_idx = [0] * n
-
-	l_idx[0] = -1
+	l_idx = [-1] + [0] * (n - 1)
 
 	for i in range(m):
 
 		l_idx[0] = l_idx[0] + 1
 
-		for j in range(n-1):
-			if l_idx[j] == l_limits[j]:
-				l_idx[j] = 0
-				l_idx[j+1] = l_idx[j + 1] + 1
+		j = 0
+		while j < n - 1 and l_idx[j] == l_limits[j]:
+			l_idx[j] = 0
+			l_idx[j + 1] = l_idx[j + 1] + 1
+			j = j + 1
 
 		if l_idx[n - 1] == l_limits[n - 1]:
 			l_idx[n - 1] = 0
